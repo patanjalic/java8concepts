@@ -6,6 +6,7 @@ public class SimpleFunInterfaceTest {
 	      @Override
 	      public void doWork() {
 	        System.out.println("Do work in SimpleFun impl...");
+	        System.out.println("multiple");
 	      }
 	    });
 	    carryOutWork(() -> System.out.println("Do work in lambda exp impl..."));

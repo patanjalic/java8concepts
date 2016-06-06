@@ -34,5 +34,12 @@ public class TestLambdaExpressions {
 		for(Person person:persons) {
 			System.out.println(person.toString());
 		}
+		
+		//using lambda expressiopns
+		Collections.sort(persons, (p1, p2) -> 
+				p1.getName().compareTo(p2.getName()));
+		for(Person person:persons) {
+			System.out.println(person.toString());
+		}
 	}
 }

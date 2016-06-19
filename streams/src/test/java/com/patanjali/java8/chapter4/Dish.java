@@ -21,6 +21,32 @@ public class Dish {
         return calories;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Dish dish = (Dish) o;
+
+        return new org.apache.commons.lang3.builder.EqualsBuilder()
+                .append(vegetarian, dish.vegetarian)
+                .append(calories, dish.calories)
+                .append(name, dish.name)
+                .append(type, dish.type)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new org.apache.commons.lang3.builder.HashCodeBuilder(17, 37)
+                .append(name)
+                .append(vegetarian)
+                .append(calories)
+                .append(type)
+                .toHashCode();
+    }
+
     public Type getType() {
         return type;
     }

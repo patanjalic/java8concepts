@@ -10,6 +10,9 @@ public class DishTestUtils {
     public static List<Dish> generateTestData() {
         return Arrays.asList(
                 new Dish("pork", false, 800, Dish.Type.MEAT),
+                new Dish("pork", false, 800, Dish.Type.MEAT),
+                new Dish("pork", false, 800, Dish.Type.MEAT),
+                new Dish("cheese", false, 900, Dish.Type.MEAT),
                 new Dish("beef", false, 700, Dish.Type.MEAT),
                 new Dish("chicken", false, 400, Dish.Type.MEAT),
                 new Dish("french fries", true, 530, Dish.Type.OTHER),

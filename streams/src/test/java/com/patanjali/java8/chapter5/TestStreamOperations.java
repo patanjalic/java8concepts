@@ -39,4 +39,12 @@ public class TestStreamOperations {
         System.out.println(dish.get());
         System.out.println(dish);
     }
+    @Test
+    public void testReduce() {
+        int num = DishTestUtils.generateTestData().stream()
+                .map(d->1)
+                .reduce(0,(a,b)->a+b);
+        System.out.println("number of dishes is "+num);
+        System.out.println("number of dishes is "+DishTestUtils.generateTestData().stream().count());
+    }
 }

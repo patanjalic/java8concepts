@@ -1,4 +1,5 @@
 pipeline {
+   agent any
    def mvnHome
    stages {
       stage('Preparation') { // for display purposes

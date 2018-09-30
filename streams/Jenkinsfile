@@ -1,6 +1,9 @@
 pipeline {
    agent any
-   def mvnHome
+   tools {
+        maven 'M3'
+        jdk 'jdk1.8'
+    }
    stages {
       stage('Preparation') { // for display purposes
          // Get some code from a GitHub repository
